@@ -1,0 +1,26 @@
+#include <Servo.h>
+
+Servo myServo;
+
+int btn1pin = 2;
+int btn2pin = 3; 
+int servoPin = 9;
+int btn1State;
+int btn2State;
+  
+void setup() {
+ Serial.begin(9600); 
+ myServo.attach(servoPin);
+ 
+ pinMode(btn1pin,INPUT);
+  pinMode(btn2pin,INPUT);
+}
+void loop() {
+  btn1State = digitalRead(btn1pin);
+ btn2State = digitalRead(btn2pin);
+ 
+ Serial.print("button 1: ");
+ Serial.print(btn1State);
+ Serial.print("\t button 2: ");
+ Serial.println(btn2State);
+}
