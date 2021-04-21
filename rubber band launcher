@@ -23,4 +23,18 @@ void loop() {
  Serial.print(btn1State);
  Serial.print("\t button 2: ");
  Serial.println(btn2State);
+ if(btn1State == HIGH)
+ { 
+ 
+ myServo.write(180); 
+ 
+ }
+ 
+if(btn2State == HIGH)
+ { 
+ 
+ myServo.write(90); 
+ 
+ } 
+
 }
